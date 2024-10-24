@@ -22,7 +22,7 @@ public class CustomListTest {
         CustomList list = MockCityList();
         int expectedCountBeforeAdd = 0;
         assertEquals(expectedCountBeforeAdd, list.getCount(), "Count should be 0");
-        list.add(new City("edmonton", "alberta"));
+        list.addCity(new City("edmonton", "alberta"));
         //check count of list increase by 1
         int expectedCountAfterAdd = 1;
         assertEquals(expectedCountAfterAdd, list.getCount(), "After add, city count should be 1");
