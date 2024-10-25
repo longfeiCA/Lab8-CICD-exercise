@@ -38,4 +38,15 @@ public class CustomListTest {
         assertEquals(expectedCountAfterDelete, list.getCount(), "After deleting the newCity, the list should be empty again. ");
     }
 
+    @Test
+    public void countCitiesTest() {
+        CustomList list = MockCityList();
+        int expectedCitiesCount = 0;
+        assertEquals(expectedCitiesCount, list.countCities());
+        City newCity = new City("Edmonton", "Alberta");
+        list.addCity(newCity);
+        int expectedCitiesCountAfterAdd = 1;
+        assertEquals(expectedCitiesCountAfterAdd, list.countCities());
+    }
+
 }
